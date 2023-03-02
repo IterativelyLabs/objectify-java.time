@@ -15,7 +15,7 @@ import java.time.LocalDateTime;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.mock;
 
-@ExtendWith({LocalDatastoreExtension.class})
+@ExtendWith({LocalDatastoreExtension.class, ObjectifyExtension.class, LocalMemcacheExtension.class})
 public class JavaTimeTranslatorsTest {
 
     @Test
