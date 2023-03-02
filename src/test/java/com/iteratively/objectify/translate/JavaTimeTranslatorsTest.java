@@ -3,6 +3,7 @@ package com.iteratively.objectify.translate;
 import com.google.cloud.Timestamp;
 import com.google.cloud.datastore.*;
 import com.googlecode.objectify.ObjectifyFactory;
+import com.googlecode.objectify.ObjectifyService;
 import com.googlecode.objectify.impl.LoadEngine;
 import com.googlecode.objectify.impl.Path;
 import com.googlecode.objectify.impl.translate.*;
@@ -20,7 +21,7 @@ public class JavaTimeTranslatorsTest {
 
     @Test
     public void test_expected_translators_are_added() {
-        ObjectifyFactory objectifyFactory = new ObjectifyFactory(DatastoreOptions.newBuilder().build().getService());
+        ObjectifyFactory objectifyFactory = ObjectifyService.factory();
 
         Translators translators = objectifyFactory.getTranslators();
         assertNotNull(translators);
@@ -35,7 +36,7 @@ public class JavaTimeTranslatorsTest {
     public void test_localdate_translation_works_as_expected() {
         final LoadEngine loadEngine = mock(LoadEngine.class);
 
-        ObjectifyFactory objectifyFactory = new ObjectifyFactory(DatastoreOptions.newBuilder().build().getService());
+        ObjectifyFactory objectifyFactory = ObjectifyService.factory();
 
         JavaTimeTranslators.add(objectifyFactory);
 
@@ -61,7 +62,7 @@ public class JavaTimeTranslatorsTest {
     public void test_localdatetime_translation_works_as_expected() {
         final LoadEngine loadEngine = mock(LoadEngine.class);
 
-        ObjectifyFactory objectifyFactory = new ObjectifyFactory(DatastoreOptions.newBuilder().build().getService());
+        ObjectifyFactory objectifyFactory = ObjectifyService.factory();
 
         JavaTimeTranslators.add(objectifyFactory);
 
