@@ -7,6 +7,9 @@ import com.googlecode.objectify.ObjectifyService;
 import com.googlecode.objectify.impl.LoadEngine;
 import com.googlecode.objectify.impl.Path;
 import com.googlecode.objectify.impl.translate.*;
+import com.googlecode.objectify.test.util.LocalDatastoreExtension;
+import com.googlecode.objectify.test.util.LocalMemcacheExtension;
+import com.googlecode.objectify.test.util.ObjectifyExtension;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 

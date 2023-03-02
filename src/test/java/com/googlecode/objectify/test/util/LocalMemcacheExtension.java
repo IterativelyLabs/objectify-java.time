@@ -1,4 +1,4 @@
-package com.iteratively.objectify.translate;
+package com.googlecode.objectify.test.util;
 
 import net.spy.memcached.MemcachedClient;
 import org.junit.jupiter.api.extension.BeforeAllCallback;

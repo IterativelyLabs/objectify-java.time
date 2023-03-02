@@ -1,4 +1,4 @@
-package com.iteratively.objectify.translate;
+package com.googlecode.objectify.test.util;
 
 import com.google.cloud.datastore.testing.LocalDatastoreHelper;
 import org.junit.jupiter.api.extension.BeforeAllCallback;

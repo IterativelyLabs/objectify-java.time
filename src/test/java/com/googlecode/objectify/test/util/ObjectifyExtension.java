@@ -1,4 +1,4 @@
-package com.iteratively.objectify.translate;
+package com.googlecode.objectify.test.util;
 
 import com.google.cloud.datastore.Datastore;
 import com.google.cloud.datastore.testing.LocalDatastoreHelper;
