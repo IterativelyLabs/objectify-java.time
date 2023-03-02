@@ -7,6 +7,7 @@ import com.googlecode.objectify.impl.LoadEngine;
 import com.googlecode.objectify.impl.Path;
 import com.googlecode.objectify.impl.translate.*;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -14,8 +15,8 @@ import java.time.LocalDateTime;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.mock;
 
+@ExtendWith({LocalDatastoreExtension.class})
 public class JavaTimeTranslatorsTest {
-
 
     @Test
     public void test_expected_translators_are_added() {
