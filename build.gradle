@@ -1,0 +1,14 @@
+plugins {
+    id 'java'
+}
+
+group 'com.iteratively'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.googlecode.objectify:objectify:6.0.9'
+}
