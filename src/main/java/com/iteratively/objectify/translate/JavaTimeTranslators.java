@@ -8,7 +8,7 @@ public class JavaTimeTranslators {
     }
 
     public static void add(ObjectifyFactory factory) {
-        factory.getTranslators().add(new JavaTimeLocalDateTimestampTranslatorFactory());
-        factory.getTranslators().add(new JavaTimeLocalDateTimeTimestampTranslatorFactory());
+        factory.getTranslators().addEarly(new JavaTimeLocalDateTimestampTranslatorFactory());
+        factory.getTranslators().addEarly(new JavaTimeLocalDateTimeTimestampTranslatorFactory());
     }
 }

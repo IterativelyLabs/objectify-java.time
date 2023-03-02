@@ -28,7 +28,7 @@ public class JavaTimeLocalDateTimeTimestampTranslatorFactory extends SimpleTrans
 
     @Override
     protected Value<Timestamp> toDatastore(final LocalDateTime localDateTime) {
-        return new TimestampValue(Timestamp.ofTimeSecondsAndNanos(localDateTime.toEpochSecond(UTCZoneOffset),0));
+        return new TimestampValue(Timestamp.ofTimeSecondsAndNanos(localDateTime.atZone(UTCZoneId).toEpochSecond(),0));
     }
 
 
