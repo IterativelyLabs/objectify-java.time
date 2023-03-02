@@ -16,10 +16,12 @@ To add support for `java.time.LocalDateTime` and `java.time.LocalDate`, use `Jav
 Alternatively, if you only want specific support, you can add the individual factories yourself.
 ```java
   # LocalDate
-  objectifyFactory.getTranslators().addEarly(JavaTimeLocalDateTimestampTranslatorFactory());
+   ObjectifyFactory objectifyFactory = ObjectifyService.factory();
+   objectifyFactory.getTranslators().addEarly(JavaTimeLocalDateTimestampTranslatorFactory());
 ```
 
 ```java
   # LocalDateTime
+  ObjectifyFactory objectifyFactory = ObjectifyService.factory();
   objectifyFactory.getTranslators().addEarly(JavaTimeLocalDateTimeTimestampTranslatorFactory());
 ```
