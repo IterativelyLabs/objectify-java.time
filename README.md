@@ -3,3 +3,23 @@
 # objectify-java.time
 
 Utility classes to enable use of java.time classes within Objectify entities.
+
+## Initiasing
+
+To add support for `LocalDateTime` and `LocalDate`, use `JavaTimeTranslators` to add everything in one go.
+
+```java
+        ObjectifyFactory objectifyFactory = ObjectifyService.factory();
+        JavaTimeTranslators.add(objectifyFactory);
+```
+
+Alternatively, if you only want specific support, you can add the individual factories yourself.
+```java
+  # LocalDate
+  objectifyFactory.getTranslators().addEarly(JavaTimeLocalDateTimestampTranslatorFactory());
+```
+
+```java
+  # LocalDateTime
+  objectifyFactory.getTranslators().addEarly(JavaTimeLocalDateTimeTimestampTranslatorFactory());
+```
