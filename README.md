@@ -4,7 +4,7 @@
 
 Utility classes to enable use of java.time classes within Objectify entities.
 
-## Initiasing
+## Initialising
 
 To add support for `java.time.LocalDateTime` and `java.time.LocalDate`, use `JavaTimeTranslators` to add everything in one go.
 
